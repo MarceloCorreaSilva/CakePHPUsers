@@ -10,15 +10,13 @@
 
         echo $this->Html->css(array(
             'normazile',
-            'bootstrap.min',
-            'Users.fileinput.min'
+            'bootstrap.min'
         ));
 
         echo $this->Html->script(array(
             'lib/jquery.min',
             'lib/modernizr',
             'lib/bootstrap.min',
-            'Users.fileinput.min'
         ));
 
         echo $this->fetch('meta');
@@ -29,18 +27,7 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <?php echo $this->element('nav/navbar-default'); ?>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-2">
-                    <?php echo $this->element('nav/sidebar'); ?>
-                </div>
-                <div class="col-md-10">
-                    <?php echo $this->Session->flash(); ?>
-
+                <div class="col-md-6 col-md-offset-3">              
                     <?php echo $this->fetch('content'); ?>
                 </div>
             </div>
