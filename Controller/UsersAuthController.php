@@ -3,7 +3,7 @@
 App::uses('AppController', 'Controller');
 
 class UsersAuthController extends AppController {
-
+    
     public $helpers = array(
         'Session'
     );
@@ -39,6 +39,11 @@ class UsersAuthController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
+        
+        if (!$this->_checkConfigFile()) {
+            $this->redirect(array('plugin' => 'users', 'controller' => 'install', 'action' => 'install'));
+        }
+        
         $this->layout = "default";
 
         /* Auth setings */
@@ -58,4 +63,11 @@ class UsersAuthController extends AppController {
         }
     }
 
+    /**
+     * Check if plugin config file exists
+     * @return bool
+     */
+    private function _checkConfigFile() {
+        return !!file_exists(App::pluginPath('Users') . 'Config' . DS . 'config.php');
+    }
 }

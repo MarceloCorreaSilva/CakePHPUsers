@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
     <head>
         <?php echo $this->Html->charset(); ?>
         <title>
@@ -10,7 +10,7 @@
 
         echo $this->Html->css(array(
             'normazile',
-            'bootstrap.min'
+            'bootstrap.min',
         ));
 
         echo $this->Html->script(array(
@@ -25,15 +25,12 @@
         ?>
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <?php echo $this->Session->flash(); ?>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <?php echo $this->Session->flash(); ?>
 
-                    <?php echo $this->fetch('content'); ?>
-                </div>
+                <?php echo $this->fetch('content'); ?>
             </div>
         </div>
-        <?php echo $this->element('sql_dump'); ?>
     </body>
 </html>

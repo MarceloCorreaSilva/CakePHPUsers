@@ -1,4 +1,16 @@
 <?php 
+if (!file_exists(App::pluginPath('Users') . 'Config' . DS . 'config.php')) {
+    Router::connect(
+        '/users/install',
+        array( 'controller' => 'install', 'action' => 'install', 'plugin' => 'users' )
+    );
+}
+
+Router::connect(
+    '/users/install',
+    array( 'controller' => 'install', 'action' => 'install', 'plugin' => 'users' )
+);
+
 Router::connect(
     '/users/login',
     array( 'controller' => 'users', 'action' => 'login', 'plugin' => 'users' )
