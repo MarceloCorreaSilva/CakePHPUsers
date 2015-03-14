@@ -41,6 +41,7 @@ class UsersAuthController extends AppController {
         parent::beforeFilter();
         $this->layout = "default";
 
+        /* Auth setings */
         $this->Auth->deny('*');
         $this->set('logged_in', $this->Auth->loggedIn());
         $this->set('current_user', $this->Auth->user());

@@ -68,7 +68,6 @@ class UsersController extends UsersAppController {
     /**
      * view method
      *
-     * @throws NotFoundException
      * @param string $id
      * @return void
      */
@@ -79,26 +78,32 @@ class UsersController extends UsersAppController {
         $options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
         $this->set('user', $this->User->find('first', $options));
     }
-    
+
+    /**
+     * view profile
+     *
+     * @param string $id
+     * @return void
+     */
     public function profile($id = null) {
         $this->layout = 'profile';
-        if ($this->Auth->user('id') == $id) {
-            if ($this->request->is(array('post', 'put'))) {
-                if ($this->User->save($this->request->data)) {
-                    $this->Session->setFlash(__('The user has been saved.'), 'Users.flash/success');
-                    return $this->redirect(array('action' => 'profile', $id));
-                } else {
-                    $this->Session->setFlash(__('The user could not be saved. Please, try again.'), 'Users.flash/error');
-                }
-            } else {
-                $options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
-                $this->request->data = $this->User->find('first', $options);
-            }
-            $groups = $this->User->Group->find('list');
-            $this->set(compact('groups'));
-        } else {
+        if ($this->Auth->user('id') !== $id) {
             return $this->redirect(array('action' => 'index'));
         }
+        if ($this->request->is(array('post', 'put'))) {
+            if ($this->User->save($this->request->data)) {
+                $this->Session->setFlash(__('The user has been saved.'), 'Users.flash/success');
+                return $this->redirect(array('action' => 'profile', $id));
+            } else {
+                $this->Session->setFlash(__('The user could not be saved. Please, try again.'), 'Users.flash/error');
+            }
+        } else {
+            $options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
+            $this->request->data = $this->User->find('first', $options);
+        }
+        $groups = $this->User->Group->find('list');
+        $this->set(compact('groups'));
+         
     }
 
     /**
@@ -110,7 +115,7 @@ class UsersController extends UsersAppController {
         if ($this->request->is('post')) {
             $this->User->create();
             if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash(__('The user has been saved.'), 'Users.flash/success');                
+                $this->Session->setFlash(__('The user has been saved.'), 'Users.flash/success');
                 return $this->redirect(array('action' => 'index'));
             } else {
                 $this->Session->setFlash(__('The user could not be saved. Please, try again.'), 'Users.flash/error');
@@ -120,6 +125,11 @@ class UsersController extends UsersAppController {
         $this->set(compact('groups'));
     }
 
+    /**
+     * register method
+     *
+     * @return void
+     */
     public function register() {
         $this->layout = 'login';
         if ($this->request->is('post')) {
@@ -138,13 +148,13 @@ class UsersController extends UsersAppController {
     /**
      * edit method
      *
-     * @throws NotFoundException
      * @param string $id
      * @return void
      */
     public function edit($id = null) {
         if (!$this->User->exists($id)) {
-            throw new NotFoundException(__('Invalid user'));
+            $this->Session->setFlash(__('Inexistent user.'), 'Users.flash/error');
+            return $this->redirect(array('action' => 'index'));
         }
         if ($this->request->is(array('post', 'put'))) {
             if ($this->User->save($this->request->data)) {
@@ -164,14 +174,14 @@ class UsersController extends UsersAppController {
     /**
      * delete method
      *
-     * @throws NotFoundException
      * @param string $id
      * @return void
      */
     public function delete($id = null) {
         $this->User->id = $id;
         if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
+            $this->Session->setFlash(__('Inexistent user.'), 'Users.flash/error');
+            return $this->redirect(array('action' => 'index'));
         }
         $this->request->allowMethod('post', 'delete');
         if ($this->User->delete()) {

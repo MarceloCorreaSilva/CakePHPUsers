@@ -1,4 +1,4 @@
-<div class="formulario">
+<div class="formulario" style="margin-top: 180px;">
     <?php
     echo $this->Form->create('User', array(
         'class' => 'form-signin',

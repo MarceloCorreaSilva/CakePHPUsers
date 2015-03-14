@@ -1,4 +1,4 @@
-<div class="users">
+<div class="users" style="margin-top: 100px;">
     <?php
     echo $this->Form->create('User', array(
         'class' => 'form-signin',

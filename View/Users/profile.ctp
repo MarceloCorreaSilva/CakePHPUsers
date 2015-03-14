@@ -1,4 +1,4 @@
-<img src="<?php echo (!empty($this->request->data['User']['profile_image'])) ? '/img/users/' . $this->request->data['User']['profile_image'] : 'http://placehold.it/200x250'; ?>" >
+<img src="<?php echo (!empty($this->request->data['User']['profile_image'])) ? $this->base . '/img/users/' . $this->request->data['User']['profile_image'] : 'http://placehold.it/200x250'; ?>" alt="" >
 
 <?php
 $this->Html->css(
