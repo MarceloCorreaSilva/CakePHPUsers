@@ -82,6 +82,6 @@ $path = $this->base . "/img/users/" . $this->request->data['User']['profile_imag
         initialPreviewConfig: [
             {caption: '"<?php echo $this->request->data['User']['profile_image']; ?> "', width: '120px', url: '#'},
         ],
-        //initialCaption: "<?php //echo $this->request->data['User']['profile_image']; ?>"
+        initialCaption: "<?php echo $this->request->data['User']['profile_image']; ?>"
     });
 </script>

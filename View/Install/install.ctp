@@ -10,11 +10,11 @@
                 <?php $errors = 0; ?>
                 <?php
                 $files_path = WWW_ROOT . 'files';
-                if (!is_writable($files_path)) {
+                if (!is_writable(TMP)) {
                     ?>
                     <div class="alert alert-danger">
                         <i class="fa fa-times"></i>
-                        <?php echo __("Your app/webroot/files folder isn't writable"); ?>
+                        <?php echo __("Your tmp folder isn't writable"); ?>
                     </div>
                     <?php $errors++; ?>
                     <?php
@@ -22,7 +22,7 @@
                     ?>
                     <div class="alert alert-success">
                         <a href=""><i class="fa fa-check"></i>
-                            <?php echo __('Your files folder is writable.'); ?>
+                            <?php echo __('Your tmp folder is writable.'); ?>
                         </a>
                     </div>
 
@@ -43,7 +43,8 @@
                 } else {
                     ?>
                     <div class="alert alert-success">
-                        <a href=""><i class="fa fa-check"></i>
+                        <a href="">
+                            <i class="fa fa-check"></i>
                             <?php echo __('Your config folder is writable.'); ?>
                         </a>
                     </div>

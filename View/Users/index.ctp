@@ -24,7 +24,7 @@
                         ?>
                     </td>
                     <td><?php echo h($user['User']['name']); ?></td>
-                    <td><?php echo empty($user['User']['gender']) ? h('') : (($user['User']['gender'] == 'm') ? h('Homem') : h('Mulher')); ?></td>
+                    <td><?php echo empty($user['User']['gender']) ? h('') : (($user['User']['gender'] == 'm') ? __('Man') : __('Woman')); ?></td>
                     <td><?php echo h(date('d/m/Y', strtotime($user['User']['birthday']))); ?></td>
                     <td><?php echo h($user['User']['email']); ?></td>
                     <td style="text-align: center;">

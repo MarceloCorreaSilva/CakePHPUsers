@@ -21,7 +21,7 @@ class InstallController extends AppController {
         $this->Session->setFlash(__('Success! Plugin Users is now installed in your app.'), 'Users.flash/success');
 
         $this->redirect(
-                array('controller' => 'users', 'action' => 'login', 'plugin' => 'users')
+            array('controller' => 'users', 'action' => 'login', 'plugin' => 'users')
         );
 
         $this->render(false, false);
@@ -58,7 +58,6 @@ class InstallController extends AppController {
      * @return bool
      */
     private function _checkTables($tables) {
-//        return !!in_array('install', $tables);
         return !!in_array('groups', $tables) && !!in_array('users', $tables);
     }
 

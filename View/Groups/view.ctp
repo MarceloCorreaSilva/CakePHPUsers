@@ -29,7 +29,7 @@
                 <tr>
                     <td><?php echo $user['id']; ?></td>
                     <td><?php echo $user['name']; ?></td>
-                    <td><?php echo empty($user['gender']) ? h('') : (($user['gender'] == 'm') ? h('Homem') : h('Mulher')); ?></td>
+                    <td><?php echo empty($user['gender']) ? h('') : (($user['gender'] == 'm') ? __('Man') : __('Woman')); ?></td>
                     <td><?php echo date('d/m/Y', strtotime($user['birthday'])); ?></td>
                     <td><?php echo $user['profile_image']; ?></td>
                     <td><?php echo $user['email']; ?></td>

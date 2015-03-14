@@ -34,7 +34,6 @@ class UsersAuthController extends AppController {
         } else {
             return false;
         }
-        /* return true; */
     }
 
     public function beforeFilter() {

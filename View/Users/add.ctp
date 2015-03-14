@@ -35,7 +35,6 @@ echo $this->Form->create('User', array(
             )
         ));
         echo $this->Form->input('birthday', array('type' => 'text', 'id' => 'calendar'));
-//        echo $this->Form->input('profile_image', array('type' => 'file'));
         echo $this->Form->input('profile_image', array(
             'id' => 'file-1',
             'type' => 'file',

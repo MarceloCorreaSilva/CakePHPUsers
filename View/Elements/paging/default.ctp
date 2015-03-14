@@ -4,7 +4,7 @@
             <p>
                 <?php
                 echo $this->Paginator->counter(array(
-                    'format' => __('Página {:page} de {:pages}, mostrando {:current} registros de um total de {:count}')
+                    'format' => __('Page {:page} of {:pages}, showing {:current} record a total of {:count}')
                 ));
                 ?>
             </p>
