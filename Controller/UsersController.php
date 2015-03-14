@@ -73,7 +73,8 @@ class UsersController extends UsersAppController {
      */
     public function view($id = null) {
         if (!$this->User->exists($id)) {
-            throw new NotFoundException(__('Invalid user'));
+            $this->Session->setFlash(__('Inexistent user.'), 'Users.flash/error');
+            return $this->redirect(array('action' => 'index'));
         }
         $options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
         $this->set('user', $this->User->find('first', $options));
