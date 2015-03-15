@@ -5,7 +5,7 @@ Plugin Users (Usuários) para CakePHP
 
 Clone o projeto dentro da pasta `app/Plugin` do projeto no qual você estiver trabalhando:
 
-* git clone `https://github.com/MarceloCorreaSilva/CakePHPUsers.git` Users
+* `git clone https://github.com/MarceloCorreaSilva/CakePHPUsers.git Users`
 
 Abra seu arquivo `app/Config/bootstrap.php` e insira o seguinte código:
 
