@@ -150,6 +150,15 @@ msgstr "Novo Usuário"
 msgid "Page {:page} of {:pages}, showing {:current} record a total of {:count}"
 msgstr "Página {:page} de {:pages}, mostrando {:current} registro(s) de um total de {:count}"
 
+#: Plugin/Users/View/Groups/add.ctp:18
+#: Plugin/Users/View/Groups/edit.ctp:19
+msgid "Permissions"
+msgstr "Permissões"
+
+#: Plugin/Users/View/Groups/add.ctp:32
+msgid "Add"
+msgstr "Cadastrar"
+
 #: Plugin/Users/View/Groups/add.ctp:15
 msgid "Add Group"
 msgstr "Cadastrar Grupo"

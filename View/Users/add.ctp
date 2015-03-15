@@ -51,7 +51,7 @@ echo $this->Form->create('User', array(
         echo $this->Form->input('status', array('type' => 'hidden', 'value' => true));
         echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-lg btn-success', 'style' => 'float: left;'));
         echo $this->Html->link(__('Cancel'), array('controller' => '', 'action' => 'index'), array('class' => 'btn btn-lg btn-danger', 'style' => 'float: left; margin-left: 10px;'));
-        ?>
+        ?>        
     </fieldset>
     <?php echo $this->Form->end(); ?>
 </div>

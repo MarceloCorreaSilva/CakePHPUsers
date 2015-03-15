@@ -39,7 +39,9 @@ class GroupsController extends UsersAppController {
             return $this->redirect(array('action' => 'index'));
         }
         $options = array('conditions' => array('Group.' . $this->Group->primaryKey => $id));
-        $this->set('group', $this->Group->find('first', $options));
+        $group = $this->Group->find('first', $options);
+        $group['Group']['permissions'] = unserialize($group['Group']['permissions']);
+        $this->set('group', $group);
     }
 
     /**
@@ -49,6 +51,9 @@ class GroupsController extends UsersAppController {
      */
     public function add() {
         if ($this->request->is('post')) {
+
+            $this->request->data['Group']['permissions'] = serialize($this->request->data['Group']['permissions']);
+
             $this->Group->create();
             if ($this->Group->save($this->request->data)) {
                 $this->Session->setFlash(__('The group has been saved.'), 'Users.flash/success');
@@ -71,6 +76,9 @@ class GroupsController extends UsersAppController {
             return $this->redirect(array('action' => 'index'));
         }
         if ($this->request->is(array('post', 'put'))) {
+
+            $this->request->data['Group']['permissions'] = serialize($this->request->data['Group']['permissions']);
+                    
             if ($this->Group->save($this->request->data)) {
                 $this->Session->setFlash(__('The group has been saved.'), 'Users.flash/success');
                 return $this->redirect(array('action' => 'index'));
@@ -80,6 +88,7 @@ class GroupsController extends UsersAppController {
         } else {
             $options = array('conditions' => array('Group.' . $this->Group->primaryKey => $id));
             $this->request->data = $this->Group->find('first', $options);
+            $this->request->data['Group']['permissions'] = unserialize($this->request->data['Group']['permissions']);
         }
     }
 

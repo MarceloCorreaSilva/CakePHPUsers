@@ -5,17 +5,19 @@
 CREATE TABLE IF NOT EXISTS `groups` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
+  `permissions` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Extraindo dados da tabela `groups`
 --
 
-INSERT INTO `groups` (`id`, `name`) VALUES
-(1, 'Users');
+INSERT INTO `groups` (`id`, `name`, `permissions`) VALUES
+(1, 'Usuário', 'a:5:{s:5:"index";s:1:"1";s:4:"view";s:1:"1";s:3:"add";s:1:"0";s:4:"edit";s:1:"0";s:6:"delete";s:1:"0";}'),
+(2, 'Administrador', 'a:5:{s:5:"index";s:1:"1";s:4:"view";s:1:"1";s:3:"add";s:1:"1";s:4:"edit";s:1:"1";s:6:"delete";s:1:"0";}');
 
--- --------------------------------------------------------
+-- -------------------------------------------------------
 
 --
 -- Estrutura da tabela `users`

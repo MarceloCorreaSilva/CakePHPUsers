@@ -13,6 +13,7 @@
     ?>
     <fieldset>
         <legend><?php echo __('Please enter your email and password'); ?></legend>
+        <?php echo $this->Session->flash('auth'); ?>
         <?php echo $this->Session->flash(); ?>
         <?php
         echo $this->Form->input('email');

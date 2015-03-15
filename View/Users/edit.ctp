@@ -41,10 +41,17 @@ $this->Html->script(
             'id' => 'file-1',
             'multiple' => true,
             'class' => 'file-loading'
-        ));
+        ));        
 
         echo $this->Form->input('password_hint');
-        echo $this->Form->input('status');
+        echo $this->Form->label('status', __('Status'));
+        echo $this->Form->input('status', array(
+            'div' => array('class' => 'checkbox'), 
+            'class' => false,
+            'label' => false,
+            'before' => '<label>',
+            'after' => __('Active') . '</label>'
+        ));
         echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-lg btn-success', 'style' => 'float: left;'));
         echo $this->Html->link(__('Cancel'), array('controller' => '', 'action' => 'index'), array('class' => 'btn btn-lg btn-danger', 'style' => 'float: left; margin-left: 10px;'));
         ?>
@@ -72,6 +79,7 @@ $path = $this->base . "/img/users/" . $this->request->data['User']['profile_imag
 //echo "});";
 //$this->Html->scriptEnd();
 ?>
+<?php if(!empty($this->request->data['User']['profile_image'])) { ?>
 <script>
     $("#file-1").fileinput({
         initialPreview: [
@@ -85,3 +93,8 @@ $path = $this->base . "/img/users/" . $this->request->data['User']['profile_imag
         initialCaption: "<?php echo $this->request->data['User']['profile_image']; ?>"
     });
 </script>
+<?php } else { ?>
+<script>
+    $("#file-1").fileinput();
+</script>
+<?php }  ?>

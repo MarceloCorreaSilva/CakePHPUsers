@@ -125,6 +125,18 @@ class User extends UsersAppModel {
         return true;
     }
 
+    /**
+     * active
+     *
+     * @var Array
+     */
+    public function active( $id ) {
+        $user = self::find('first', array('conditions' => array('User.id' => $id)));
+        unset($user['User']['password']);
+        $user['Group']['permissions'] = unserialize($user['Group']['permissions']);
+        return $user;
+    }
+
     function validateFullName($data = "") {
         $name = explode(" ", $data['name']);
         return count($name) > 1;

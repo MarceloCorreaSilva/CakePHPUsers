@@ -3,7 +3,7 @@
 App::uses('AppController', 'Controller');
 
 class UsersAuthController extends AppController {
-    
+    //public $uses = array('User');
     public $helpers = array(
         'Session'
     );
@@ -49,6 +49,7 @@ class UsersAuthController extends AppController {
         $this->Auth->deny('*');
         $this->set('logged_in', $this->Auth->loggedIn());
         $this->set('current_user', $this->Auth->user());
+        //$this->set('current_user', $this->User->active($this->Auth->user('id')));
         $this->Auth->flash['params']['class'] = 'alert alert-danger';
     }
 
