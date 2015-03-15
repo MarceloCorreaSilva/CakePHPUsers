@@ -1,0 +1,356 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Plugin/Users/View/Groups/index.ctp:18
+#: Plugin/Users/View/Groups/view.ctp:38
+#: Plugin/Users/View/Users/index.ctp:35
+msgid "View"
+msgstr "Visualizar"
+
+#: Plugin/Users/View/Groups/index.ctp:19
+#: Plugin/Users/View/Groups/view.ctp:39
+#: Plugin/Users/View/Users/index.ctp:36
+msgid "Edit"
+msgstr "Editar"
+
+#: Plugin/Users/View/Groups/view.ctp:8;21
+#: Plugin/Users/View/Users/view.ctp:12
+msgid "Name"
+msgstr "Nome"
+
+#: Plugin/Users/View/Users/view.ctp:40
+msgid "Status"
+msgstr "Status"
+
+#: Plugin/Users/View/Users/view.ctp:48
+msgid "Modified"
+msgstr "Modigicado"
+
+#: Plugin/Users/View/Users/view.ctp:44
+msgid "Created"
+msgstr "Criado"
+
+#: Plugin/Users/Controller/GroupsController.php:38;70;95
+msgid "Inexistent group."
+msgstr "Grupo inexistente."
+
+#: Plugin/Users/Controller/GroupsController.php:54;75
+msgid "The group has been saved."
+msgstr "O grupo foi salvo."
+
+#: Plugin/Users/Controller/GroupsController.php:57;78
+msgid "The group could not be saved. Please, try again."
+msgstr "O grupo não pôde ser salvo. Por favor, tente novamente."
+
+#: Plugin/Users/Controller/GroupsController.php:100
+msgid "The group has been deleted."
+msgstr "O grupo foi excluído."
+
+#: Plugin/Users/Controller/GroupsController.php:102
+msgid "The group could not be deleted. Please, try again."
+msgstr "O grupo não pode ser excluído. Por favor, tente novamente."
+
+#: Plugin/Users/Controller/InstallController.php:21
+msgid "Success! Plugin Users is now installed in your app."
+msgstr "Sucesso! O Plugin Users agora está instalado em sua aplicação."
+
+#: Plugin/Users/Controller/UsersController.php:37
+msgid "Users Login"
+msgstr "Tela de Login"
+
+#: Plugin/Users/Controller/UsersController.php:41
+msgid "The user is valid"
+msgstr "O usuário é válido."
+
+#: Plugin/Users/Controller/UsersController.php:44
+msgid "Invalid username or password, try again"
+msgstr "Nome de usuário ou senha inválidos, tente novamente"
+
+#: Plugin/Users/Controller/UsersController.php:76;157;184
+msgid "Inexistent user."
+msgstr "Usuário inexistente."
+
+#: Plugin/Users/Controller/UsersController.php:96;119;139;162
+msgid "The user has been saved."
+msgstr "O usuário foi salvo."
+
+#: Plugin/Users/Controller/UsersController.php:99;122;142;165
+msgid "The user could not be saved. Please, try again."
+msgstr "O usuário não pôde ser salvo. Por favor, tente novamente."
+
+#: Plugin/Users/Controller/UsersController.php:189
+msgid "The user has been deleted."
+msgstr "O usuário foi excluído."
+
+#: Plugin/Users/Controller/UsersController.php:191
+msgid "The user could not be deleted. Please, try again."
+msgstr "O usuário não pôde ser excluído. Por favor, tente novamente."
+
+#: Plugin/Users/Model/UsersAppModel.php:37
+msgid "Erro ao criar a pasta"
+msgstr "Erro ao criar a pasta"
+
+#: Plugin/Users/Model/UsersAppModel.php:65
+msgid "Erro ao enviar arquivo!"
+msgstr "Erro ao enviar arquivo!"
+
+#: Plugin/Users/View/Elements/nav/navbar-default.ctp:11
+msgid "Home"
+msgstr "Home"
+
+#: Plugin/Users/View/Elements/nav/navbar-default.ctp:27
+msgid "Profile"
+msgstr "Perfil"
+
+#: Plugin/Users/View/Elements/nav/navbar-default.ctp:30
+#: Plugin/Users/View/Elements/nav/sidebar.ctp:33
+msgid "Logout"
+msgstr "Sair"
+
+#: Plugin/Users/View/Elements/nav/navbar-default.ctp:36
+msgid "Login"
+msgstr "Entrar"
+
+#: Plugin/Users/View/Elements/nav/sidebar.ctp:3
+#: Plugin/Users/View/Groups/index.ctp:8
+#: Plugin/Users/View/Groups/view.ctp:26
+#: Plugin/Users/View/Users/index.ctp:13
+msgid "Actions"
+msgstr "Ações"
+
+#: Plugin/Users/View/Elements/nav/sidebar.ctp:9
+msgid "List Groups"
+msgstr "Listar Grupos"
+
+#: Plugin/Users/View/Elements/nav/sidebar.ctp:15
+msgid "New Group"
+msgstr "Novo Grupo"
+
+#: Plugin/Users/View/Elements/nav/sidebar.ctp:21
+msgid "List Users"
+msgstr "Listar Usuários"
+
+#: Plugin/Users/View/Elements/nav/sidebar.ctp:27
+msgid "New User"
+msgstr "Novo Usuário"
+
+#: Plugin/Users/View/Elements/paging/default.ctp:7
+msgid "Page {:page} of {:pages}, showing {:current} record a total of {:count}"
+msgstr "Página {:page} de {:pages}, mostrando {:current} registro(s) de um total de {:count}"
+
+#: Plugin/Users/View/Groups/add.ctp:15
+msgid "Add Group"
+msgstr "Cadastrar Grupo"
+
+#: Plugin/Users/View/Groups/add.ctp:19
+#: Plugin/Users/View/Groups/edit.ctp:20
+#: Plugin/Users/View/Users/add.ctp:53
+#: Plugin/Users/View/Users/edit.ctp:49
+#: Plugin/Users/View/Users/register.ctp:24
+msgid "Submit"
+msgstr "Salvar"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Enter"
+msgstr "Entrar"
+
+#: Plugin/Users/View/Groups/edit.ctp:15
+msgid "Edit Group"
+msgstr "Editar Grupo"
+
+#: Plugin/Users/View/Groups/index.ctp:2
+msgid "Groups"
+msgstr "Grupos"
+
+#: Plugin/Users/View/Groups/index.ctp:20
+#: Plugin/Users/View/Groups/view.ctp:40
+#: Plugin/Users/View/Users/index.ctp:37
+msgid "Delete"
+msgstr "Deletar"
+
+#: Plugin/Users/View/Groups/index.ctp:20
+#: Plugin/Users/View/Groups/view.ctp:40
+#: Plugin/Users/View/Users/index.ctp:37
+msgid "Are you sure you want to delete # %s?"
+msgstr "Tem certeza de que deseja excluir o registro # %s?"
+
+#: Plugin/Users/View/Groups/view.ctp:2
+#: Plugin/Users/View/Users/view.ctp:8
+msgid "Group"
+msgstr "Grupo"
+
+#: Plugin/Users/View/Groups/view.ctp:4;20
+#: Plugin/Users/View/Users/view.ctp:4
+msgid "Id"
+msgstr "Código"
+
+#: Plugin/Users/View/Groups/view.ctp:16
+msgid "Related Users"
+msgstr "Usuários relacionados"
+
+#: Plugin/Users/View/Groups/view.ctp:22
+#: Plugin/Users/View/Users/view.ctp:16
+msgid "Gender"
+msgstr "Sexo"
+
+#: Plugin/Users/View/Groups/view.ctp:23
+#: Plugin/Users/View/Users/view.ctp:20
+msgid "Birthday"
+msgstr "Data de Aniversário"
+
+#: Plugin/Users/View/Groups/view.ctp:24
+#: Plugin/Users/View/Users/view.ctp:24
+msgid "Profile Image"
+msgstr "Imagem de Perfil"
+
+#: Plugin/Users/View/Groups/view.ctp:25
+#: Plugin/Users/View/Users/view.ctp:28
+msgid "Email"
+msgstr "Email"
+
+#: Plugin/Users/View/Groups/view.ctp:32
+#: Plugin/Users/View/Users/index.ctp:27
+msgid "Man"
+msgstr "Homem"
+
+#: Plugin/Users/View/Groups/view.ctp:32
+#: Plugin/Users/View/Users/index.ctp:27
+msgid "Woman"
+msgstr "Mulher"
+
+#: Plugin/Users/View/Install/install.ctp:5
+msgid "Install Users Plugin"
+msgstr "Instalando o Plugin Users"
+
+#: Plugin/Users/View/Install/install.ctp:8
+msgid "Checking requirements before installing Users ..."
+msgstr "Verificando requisitos antes de instalar o Plugin Users ..."
+
+#: Plugin/Users/View/Install/install.ctp:17
+msgid "Your tmp folder isn't writable"
+msgstr "Sua pasta 'tmp não é gravável."
+
+#: Plugin/Users/View/Install/install.ctp:25
+msgid "Your tmp folder is writable."
+msgstr "Sua pasta 'tmp' é gravável."
+
+#: Plugin/Users/View/Install/install.ctp:39
+msgid "Your app/Plugin/Users/Config folder isn't writable"
+msgstr "Sua pasta 'app/Plugin/Users/Config' não é gravável."
+
+#: Plugin/Users/View/Install/install.ctp:48
+msgid "Your config folder is writable."
+msgstr "Sua pasta 'app/Plugin/Users/Config' é gravável."
+
+#: Plugin/Users/View/Install/install.ctp:59
+msgid "Your database configuration file is present."
+msgstr "Seu arquivo de configuração de banco de dados está presente."
+
+#: Plugin/Users/View/Install/install.ctp:66
+msgid "Your database configuration file is NOT present."
+msgstr "Seu arquivo de configuração de banco de dados não está presente."
+
+#: Plugin/Users/View/Install/install.ctp:67
+msgid "Rename 'APP/Config/database.php.default' to 'APP/Config/database.php"
+msgstr "Renomeie 'APP/Config/database.php.default' para 'APP/Config/database.php"
+
+#: Plugin/Users/View/Install/install.ctp:83
+msgid "Your database is connected."
+msgstr "Seu banco de dados está conectado."
+
+#: Plugin/Users/View/Install/install.ctp:89
+msgid "You need to connect a database before continue."
+msgstr "Você precisa conectar um banco de dados antes de continuar."
+
+#: Plugin/Users/View/Install/install.ctp:110
+msgid "Please, fix all the itens above to continue."
+msgstr "Por favor, corrija todos os itens acima para continuar."
+
+#: Plugin/Users/View/Install/install.ctp:117
+msgid "We will create a config file and create 2 tables in your database."
+msgstr "Vamos criar um arquivo de configuração e criar 2 tabelas em seu banco de dados."
+
+#: Plugin/Users/View/Users/add.ctp:25
+#: Plugin/Users/View/Users/register.ctp:15
+msgid "Add User"
+msgstr "Cadastrar Usuário"
+
+#: Plugin/Users/View/Users/edit.ctp:25
+#: Plugin/Users/View/Users/profile.ctp:27
+msgid "Edit User"
+msgstr "Editar Usuário"
+
+#: Plugin/Users/View/Users/index.ctp:2
+msgid "Users"
+msgstr "Usuários"
+
+#: Plugin/Users/View/Users/index.ctp:31
+msgid "Active"
+msgstr "Ativo"
+
+#: Plugin/Users/View/Users/index.ctp:31
+msgid "Inactive"
+msgstr "Inativo"
+
+#: Plugin/Users/View/Users/login.ctp:15
+msgid "Please enter your email and password"
+msgstr "Por favor, informe seu email e senha!"
+
+#: Plugin/Users/View/Users/login.ctp:21
+msgid "Register"
+msgstr "Registre-se"
+
+#: Plugin/Users/View/Users/view.ctp:2
+msgid "User"
+msgstr "Usuário"
+
+#: Plugin/Users/View/Users/view.ctp:32
+msgid "Password"
+msgstr "Senha"
+
+#: Plugin/Users/View/Users/view.ctp:36
+msgid "Password Hint"
+msgstr "Dica de Senha"
+
+#: Plugin/Users/Model/User.php:validation for field group_id
+msgid "numeric"
+msgstr "numérico"
+
+#: Plugin/Users/Model/User.php:validation for field name
+msgid "notEmpty"
+msgstr "não vazio"
+
+#: Plugin/Users/Model/User.php:validation for field name
+msgid "Por favor, digite seu nome completo (nome sobrenome)."
+msgstr "Por favor, digite seu nome completo (nome sobrenome)."
+
+#: Plugin/Users/Model/User.php:validation for field email
+msgid "email"
+msgstr "email"
+
+#: Plugin/Users/Model/User.php:validation for field email
+msgid "O email informado, já está em uso, por favor informe outro."
+msgstr "O email informado, já está em uso, por favor informe outro."
+
+#: Plugin/Users/Model/User.php:validation for field password
+msgid "Informe uma senha com no minímo 6 caracteres"
+msgstr "Informe uma senha com no minímo 6 caracteres"
+
+#: Plugin/Users/Model/User.php:validation for field status
+msgid "boolean"
+msgstr "boleano"
+

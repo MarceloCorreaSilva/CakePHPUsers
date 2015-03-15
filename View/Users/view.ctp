@@ -15,7 +15,7 @@
         </dd>
         <dt><?php echo __('Gender'); ?></dt>
         <dd>
-            <?php echo h($user['User']['gender']); ?>
+            <?php echo empty($user['User']['gender']) ? h('') : (($user['User']['gender'] == 'm') ? __('Man') : __('Woman')); ?>
         </dd>
         <dt><?php echo __('Birthday'); ?></dt>
         <dd>
@@ -29,17 +29,13 @@
         <dd>
             <?php echo h($user['User']['email']); ?>
         </dd>
-        <dt><?php echo __('Password'); ?></dt>
-        <dd>
-            <?php echo h($user['User']['password']); ?>
-        </dd>
         <dt><?php echo __('Password Hint'); ?></dt>
         <dd>
             <?php echo h($user['User']['password_hint']); ?>
         </dd>
         <dt><?php echo __('Status'); ?></dt>
         <dd>
-            <?php echo h($user['User']['status']); ?>
+            <?php echo ($user['User']['status'] == 1) ? __('Active') : __('Inactive'); ?>
         </dd>
         <dt><?php echo __('Created'); ?></dt>
         <dd>
