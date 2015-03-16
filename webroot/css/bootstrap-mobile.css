@@ -1,0 +1,36 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	/* Resetar margem e espaçamento */
+	* { margin: 0px; padding: 0px; }
+	/* Definindo 100% ao tamanho dos containers */
+	.container, .container-fluid {
+		width: 100%;
+		height: auto;
+		font-size: 2.5em;
+	}
+
+	form legend { font-size: 3em; }
+	form label { font-size: 2em; }
+
+	.form-control {
+        width: 100%;
+        height: 130px;
+        font-size: 2.5em;
+        padding: 15px;
+    }
+    .btn {
+        /*display: block;*/
+        width: 100%;
+        font-size: 2.5em;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .table th, .table td {
+		width: 33%;
+    }
+
+    .table td .btn-group a .btn {
+
+    } 
+}

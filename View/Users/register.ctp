@@ -20,8 +20,18 @@
         echo $this->Form->input('password');
         echo $this->Form->input('password_hint');
         echo $this->Form->input('status', array('type' => 'hidden', 'value' => true));
-        echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-lg btn-success', 'style' => 'float: left;'));
-        echo $this->Html->link(__('Cancel'), array('controller' => 'users', 'action' => 'login'), array('class' => 'btn btn-lg btn-danger', 'style' => 'float: left; margin-left: 10px;'));
+        echo $this->Form->submit(
+            __('Submit'), 
+            array('class' => 'btn btn-lg btn-success', 'style' => 'float: left;')
+        );
+        echo $this->Html->link(
+            __('Cancel'), 
+            array('controller' => 'users', 'action' => 'login'), 
+            array(
+                'class' => 'btn btn-lg btn-danger', 
+                'style' => 'float: left; margin-left: 10px;'
+            )
+        );
         ?>
     </fieldset>
 <?php echo $this->Form->end(); ?>

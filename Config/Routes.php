@@ -43,9 +43,8 @@ Router::connect(
 );
 
 Router::connect(
-    '/users/profile/:user_id',
-    array( 'controller' => 'users', 'action' => 'profile', 'plugin' => 'users' ),
-    array( 'named' => array( 'user_id' => array('user_id') ), 'pass' => array('user_id') )
+    '/users/profile',
+    array( 'controller' => 'users', 'action' => 'profile', 'plugin' => 'users' )
 );
 
 Router::connect(

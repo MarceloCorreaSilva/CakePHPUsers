@@ -38,9 +38,8 @@ $this->Html->script(
             )
         ));
         echo $this->Form->input('birthday', array('type' => 'text', 'id' => 'calendar'));
-        echo $this->Form->input('profile_image', array('type' => 'file'));
+        //echo $this->Form->input('profile_image', array('type' => 'file'));
         echo $this->Form->input('password_hint');
-        echo $this->Form->input('status');
         echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-lg btn-success'));
         ?>
     </fieldset>

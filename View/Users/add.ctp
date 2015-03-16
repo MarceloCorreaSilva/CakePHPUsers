@@ -35,7 +35,7 @@ echo $this->Form->create('User', array(
             )
         ));
         echo $this->Form->input('birthday', array('type' => 'text', 'id' => 'calendar'));
-        echo $this->Form->input('profile_image', array(
+        /*echo $this->Form->input('profile_image', array(
             'id' => 'file-1',
             'type' => 'file',
             'multiple' => false,
@@ -44,7 +44,13 @@ echo $this->Form->create('User', array(
             'data-preview-file-type' => 'any',
             'data-initial-caption' => '',
             'data-overwrite-initial' => 'false'
-        ));
+        ));*/
+        echo $this->Form->input('profile_image', array(
+            'type' => 'file',
+            'id' => 'file-1',
+            'multiple' => false,
+            'class' => 'file-loading'
+        )); 
         echo $this->Form->input('email');
         echo $this->Form->input('password');
         echo $this->Form->input('password_hint');
@@ -55,3 +61,12 @@ echo $this->Form->create('User', array(
     </fieldset>
     <?php echo $this->Form->end(); ?>
 </div>
+
+<script>
+    $("#file-1").fileinput({
+        browseClass: "btn btn-primary btn-block",
+        showCaption: false,
+        showRemove: false,
+        showUpload: false
+    });
+</script>

@@ -86,20 +86,17 @@ class UsersController extends UsersAppController {
      * @param string $id
      * @return void
      */
-    public function profile($id = null) {
+    public function profile() {
         $this->layout = 'profile';
-        if ($this->Auth->user('id') !== $id) {
-            return $this->redirect(array('action' => 'index'));
-        }
         if ($this->request->is(array('post', 'put'))) {
             if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('The user has been saved.'), 'Users.flash/success');
-                return $this->redirect(array('action' => 'profile', $id));
+                return $this->redirect(array('action' => 'profile', $this->Auth->user('id')));
             } else {
                 $this->Session->setFlash(__('The user could not be saved. Please, try again.'), 'Users.flash/error');
             }
         } else {
-            $options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
+            $options = array('conditions' => array('User.' . $this->User->primaryKey => $this->Auth->user('id')));
             $this->request->data = $this->User->find('first', $options);
         }
         $groups = $this->User->Group->find('list');

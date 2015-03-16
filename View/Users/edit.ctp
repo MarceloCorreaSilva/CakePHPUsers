@@ -39,7 +39,7 @@ $this->Html->script(
         echo $this->Form->input('profile_image', array(
             'type' => 'file',
             'id' => 'file-1',
-            'multiple' => true,
+            'multiple' => false,
             'class' => 'file-loading'
         ));        
 
@@ -82,19 +82,22 @@ $path = $this->base . "/img/users/" . $this->request->data['User']['profile_imag
 <?php if(!empty($this->request->data['User']['profile_image'])) { ?>
 <script>
     $("#file-1").fileinput({
+        browseClass: "btn btn-primary btn-block",
+        showCaption: false,
+        showRemove: false,
+        showUpload: false,
         initialPreview: [
             "<img src=\"<?php echo $path; ?>\" class=\"file-preview-image\" alt=\"\" title=\"\">",
         ],
-        overwriteInitial: false,
-        maxFileSize: 100,
-        initialPreviewConfig: [
-            {caption: '"<?php echo $this->request->data['User']['profile_image']; ?> "', width: '120px', url: '#'},
-        ],
-        initialCaption: "<?php echo $this->request->data['User']['profile_image']; ?>"
     });
 </script>
 <?php } else { ?>
 <script>
-    $("#file-1").fileinput();
+    $("#file-1").fileinput({
+        browseClass: "btn btn-primary btn-block",
+        showCaption: false,
+        showRemove: false,
+        showUpload: false
+    });
 </script>
 <?php }  ?>

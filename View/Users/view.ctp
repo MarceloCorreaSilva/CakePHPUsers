@@ -19,7 +19,7 @@
         </dd>
         <dt><?php echo __('Birthday'); ?></dt>
         <dd>
-            <?php echo h($user['User']['birthday']); ?>
+            <?php echo h(date('d/m/Y', strtotime($user['User']['birthday']))); ?>
         </dd>
         <dt><?php echo __('Profile Image'); ?></dt>
         <dd>
@@ -31,7 +31,7 @@
         </dd>
         <dt><?php echo __('Password Hint'); ?></dt>
         <dd>
-            <?php echo h($user['User']['password_hint']); ?>
+            <?php echo (!empty($user['User']['password_hint'])) ? h($user['User']['password_hint']) : h('Não informada'); ?>
         </dd>
         <dt><?php echo __('Status'); ?></dt>
         <dd>
@@ -39,11 +39,11 @@
         </dd>
         <dt><?php echo __('Created'); ?></dt>
         <dd>
-            <?php echo h($user['User']['created']); ?>
+            <?php echo h(date('d/m/Y H:m:i', strtotime($user['User']['created']))); ?>
         </dd>
         <dt><?php echo __('Modified'); ?></dt>
         <dd>
-            <?php echo h($user['User']['modified']); ?>
+            <?php echo h(date('d/m/Y H:m:i', strtotime($user['User']['modified']))); ?>
         </dd>
     </dl>
 </div>
