@@ -24,7 +24,7 @@ $this->Html->script(
     ));
     ?>
     <fieldset>
-        <legend><?php echo __('Edit User'); ?></legend>
+        <legend><?php echo __('Profile'); ?></legend>
         <?php
         echo $this->Form->input('id');
         echo $this->Form->input('group_id');

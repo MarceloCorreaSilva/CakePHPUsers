@@ -20,6 +20,7 @@
             'lib/jquery.min',
             'lib/modernizr',
             'lib/bootstrap.min',
+            'Users.bootstrap-mobile'
         ));
 
         echo $this->fetch('meta');

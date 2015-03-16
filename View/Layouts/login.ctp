@@ -13,14 +13,14 @@
         echo $this->Html->css(array(
             'normazile',
             'bootstrap.min',
-            //'Users.bootstrap-mobile'
+            'Users.users'
         ));
 
         echo $this->Html->script(array(
             'lib/jquery.min',
             'lib/modernizr',
             'lib/bootstrap.min',
-            //'Users.bootstrap-mobile'
+            'Users.bootstrap-mobile'
         ));
 
         echo $this->fetch('meta');
